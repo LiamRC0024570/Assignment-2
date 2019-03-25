@@ -65,41 +65,68 @@ namespace Assignment_2
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             double R4 = 0;
-            try
-            {
-                R4 = double.Parse(textBox4.Text);
-                R4 = 0;
-            }
-            catch
-            {
-
-            }
-
             double R5 = 0;
-            try
-            {
-                R5 = double.Parse(textBox5.Text);
-                R5 = 0;
-            }
-            catch
-            {
-
-            }
-
             double R6 = 0;
             try
             {
-                R6 = double.Parse(textBox6.Text);
-                R6 = 0;
+                R4 = double.Parse(textBox1.Text);
+                R5 = double.Parse(textBox2.Text);
+                R6 = double.Parse(textBox3.Text);
             }
             catch
             {
 
             }
+
+           string st = "three";
+            try
+            {
+                int it = int.Parse(st);
+            }
+            catch
+            {
+                MessageBox.Show(st + "eigfouershgoseiyg ");
+            }
+
+
             double Resistance = R4 + R5 + R6;
-            label8.Text = "Resistance = "+;
+            //The answer will be displayed by a a label.
+            label8.Text = "Resistance = " +Resistance;
            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            double R1 = 0;
+            double R2 = 0;
+            double R3 = 0;
+            try
+            {
+                R1 = double.Parse(textBox1.Text);
+                R2 = double.Parse(textBox2.Text);
+                R3 = double.Parse(textBox3.Text);
+            }
+            catch
+            {
+
+            }
+
+            string st = "three";
+            try
+            {
+                int it = int.Parse(st);
+            }
+            catch
+            {
+                MessageBox.Show(st + ". ");
+            }
+
+            //The second part of the code, parallel, was done the same was as the first, but with the equations changed
+            double Resistance = 1/(1/R1 + 1/R2 + 1/R3);
+            //The answer will be displayed by a a label.
+            label9.Text = "Resistance = " + Resistance;
         }
     }
 }
