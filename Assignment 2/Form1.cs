@@ -77,24 +77,15 @@ namespace Assignment_2
             }
             catch
             {
-
+                MessageBox.Show("Error");
+                //this message will show when a letter is entered into the text box.
             }
 
-           string st = "three";
-            try
-            {
-                int it = int.Parse(st);
-            }
-            catch
-            {
-                MessageBox.Show(st + "eigfouershgoseiyg ");
-            }
-
-
+            //
             double Resistance = R4 + R5 + R6;
+
             //The answer will be displayed by a a label.
-            label8.Text = "Resistance = " +Resistance;
-           
+            label8.Text = "Resistance (Ohms) = " +Resistance;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -107,26 +98,19 @@ namespace Assignment_2
                 R1 = double.Parse(textBox1.Text);
                 R2 = double.Parse(textBox2.Text);
                 R3 = double.Parse(textBox3.Text);
+                //Whatever is put in textBox1 will be R1 in the equation, same for  R2, R3 and so on.
             }
             catch
             {
-
+                MessageBox.Show("Error");
+                //this message will show when a letter is entered into the text box.
             }
 
-            string st = "three";
-            try
-            {
-                int it = int.Parse(st);
-            }
-            catch
-            {
-                MessageBox.Show(st + ". ");
-            }
-
-            //The second part of the code, parallel, was done the same was as the first, but with the equations changed
+            //
             double Resistance = 1/(1/R1 + 1/R2 + 1/R3);
-            //The answer will be displayed by a a label.
-            label9.Text = "Resistance = " + Resistance;
+
+            //The answer will be displayed by a a label, this is how.
+            label9.Text = "Resistance (Ohms) = " + Resistance;
         }
     }
 }
