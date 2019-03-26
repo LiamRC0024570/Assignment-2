@@ -71,9 +71,9 @@ namespace Assignment_2
             double R6 = 0;
             try
             {
-                R4 = double.Parse(textBox1.Text);
-                R5 = double.Parse(textBox2.Text);
-                R6 = double.Parse(textBox3.Text);
+                R4 = double.Parse(textBox4.Text);
+                R5 = double.Parse(textBox5.Text);
+                R6 = double.Parse(textBox6.Text);
             }
             catch
             {
@@ -85,7 +85,7 @@ namespace Assignment_2
             double Resistance = R4 + R5 + R6;
 
             //The answer will be displayed by a a label.
-            label8.Text = "Resistance (Ohms) = " +Resistance;
+            label8.Text = "Resistance (Ω) = " + Resistance;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -102,7 +102,7 @@ namespace Assignment_2
             }
             catch
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("no u");
                 //this message will show when a letter is entered into the text box.
             }
 
@@ -110,7 +110,7 @@ namespace Assignment_2
             double Resistance = 1/(1/R1 + 1/R2 + 1/R3);
 
             //The answer will be displayed by a a label, this is how.
-            label9.Text = "Resistance (Ohms) = " + Resistance;
+            label9.Text = "Resistance (Ω) = " + Resistance;
         }
     }
 }
